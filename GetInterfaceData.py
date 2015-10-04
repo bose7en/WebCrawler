@@ -6,6 +6,7 @@ import ftplib
 
 #获取接口信息
 #接口数据会下载到项目目录
+#需服务器端放通IP才可连接
 def downloadInterfaceDate(url,values):
     send_headers={"Content-Type":"application/json"}
     req=ul2.Request(url,values,headers=send_headers)
