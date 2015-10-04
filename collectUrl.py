@@ -8,8 +8,13 @@ import GetInertMessage
 import GetInterfaceData
 
 
+
+#接口地址
+url="http://10.245.254.110:8080/etl_platform/rest/service.shtml"
+#接口参数
+values="{\"identify\": \"87da5cdc-6b4a-48f6-8014-470441b66383\", \"userName\":\"ST_BIGDATA\",\"password\":\"Gmcc_345\",\"systemName\":\"STORM\",\"parameter\":{\"rn1\":\"1\",\"rn2\":\"600000\"}}"
 #取接口数据，下载到项目目录
-GetInterfaceData.downloadInterfaceDate()
+GetInterfaceData.downloadInterfaceDate(url,values)
 
 #解压数据，获取其中的url
 zp=zipfile.ZipFile('data.zip')
